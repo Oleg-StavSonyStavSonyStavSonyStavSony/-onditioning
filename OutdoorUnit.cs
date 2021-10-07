@@ -2,7 +2,7 @@ using System;
 
 namespace core
 {
-    class OutdoorUnit{
+    public class OutdoorUnit{
         public bool On { get; set; }
         public bool Compressor { get; set; }
         public int Ventilator { get; set; }

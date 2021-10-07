@@ -5,6 +5,7 @@ namespace core
     public class RemoteControlle{
        // public string Displey { get; set; }
         public int SetTemperature { get; set; }
+        public IndoorUnit IndoorUnit { get; set; }
         public bool  Battery { get; set; }
         public Button ButtonOfOn { get; set; } 
         public Button ButtonTempUp { get; set; }
@@ -12,17 +13,19 @@ namespace core
         
         public RemoteControlle () {
             SetTemperature = 22;
+            IndoorUnit = new IndoorUnit(false, 0, 0, false, false, false) ;
             Battery = true;
             ButtonOfOn = new Button  ("ButtonOfOn", false);
             ButtonTempUp = new Button("ButtonTempUp", false);
             ButtonTempDown = new Button("ButtonTempDown", false);
         }
 
+
         public void OnConditioning()
         {
             if(ButtonOfOn.Pressed == true)
             {
-
+                
 
 
             }

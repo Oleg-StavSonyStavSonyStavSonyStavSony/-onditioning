@@ -29,7 +29,7 @@ namespace core
             }
         }
 
-        private bool hot = true;
+        private bool hot;
         public bool Hot
         {
             get { return hot; }
@@ -47,9 +47,28 @@ namespace core
             this.RoomTemperature = roomTemperature;
             RemoteControlle = new RemoteControlle();
         }
+        public void StatusCheckTemp()
+        {
+            if (RoomTemperature < 18)
+            { cold = true; }
+            else if ( RoomTemperature > 25 )
+            { hot = true; }
+            else { fine = true; }
+        }
 
-        public void MakeCold() {
-            RemoteControlle.ButtonOfOn.Pressed = true;
+        public void MakeComfortable() {
+            if (cold == true)
+            { 
+
+            }
+            else if (hot == true)
+            {
+                RemoteControlle.ButtonOfOn.Pressed = true;
+                RemoteControlle.OnConditioning();
+
+            }
+            else { Console.WriteLine($" person {Name} is comfortableright temperature is not needed"); }
+
         }
 
 
