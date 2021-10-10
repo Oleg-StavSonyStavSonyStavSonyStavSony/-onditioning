@@ -6,10 +6,11 @@ namespace core
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Human human = new Human("Ivan", 20);
-            human.StatusCheckTemp();
-            human.MakeComfortable();
+           
+            Application application = new Application();
+            application.Strart();
+
+           
             //Console.WriteLine(human.Hot);
             //Console.WriteLine(human.Cold);
             //Console.WriteLine(human.Fine);

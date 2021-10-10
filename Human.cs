@@ -58,13 +58,14 @@ namespace core
 
         public void MakeComfortable() {
             if (cold == true)
-            { 
-
+            {
+                RemoteControlle.ButtonOfOn.Pressed = true;
+                RemoteControlle.OnConditioningCold();
             }
             else if (hot == true)
             {
                 RemoteControlle.ButtonOfOn.Pressed = true;
-                RemoteControlle.OnConditioning();
+                RemoteControlle.OnConditioningHot();
 
             }
             else { Console.WriteLine($" person {Name} is comfortableright temperature is not needed"); }
